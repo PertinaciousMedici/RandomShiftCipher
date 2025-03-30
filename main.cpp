@@ -47,7 +47,7 @@ int main(void)
 			int_vec shifts = reverse_key(raw_key);
 			int_vec chars = reverse_code(raw_code);
 			str decoded_str = decode(chars, shifts);
-			std::cout << "\x1b[1;33m[OUTPUT]:\x1b[0m \x1b[1;32m" << decoded_str << "\x1b[0m" << '\n' << '\n';
+			std::cout << "\x1b[1;33m[OUTPUT]:\x1b[0m \x1b[1;32m" << decoded_str << "\x1b[0m\n" << std::endl;
 		}
 		else
 		{
@@ -58,7 +58,7 @@ int main(void)
 			str encoded_str = build_str(chars);
 			str built_key = interpret_key(shifts);
 			std::cout << "\x1b[1;33m[OUTPUT]:\x1b[0m \x1b[1;32m" << built_key << "\x1b[0m" << '\n';
-			std::cout << "\x1b[1;33m[OUTPUT]:\x1b[0m \x1b[1;32m" << encoded_str << "\x1b[0m" << '\n' << '\n';
+			std::cout << "\x1b[1;33m[OUTPUT]:\x1b[0m \x1b[1;32m" << encoded_str << "\x1b[0m\n" << std::endl;
 		}
 	}
 
