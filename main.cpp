@@ -148,11 +148,13 @@ str interpret_key(const int_vec& nums)
 int_vec reverse_code(const str& raw_code)
 {
 	int_vec output;
+	
 	for (size_t i = 0; i < raw_code.size(); i++)
 	{
 		int char_code = (int)raw_code[i];
 		output.push_back(char_code);
 	}
+	
 	return output;
 }
 
@@ -173,7 +175,6 @@ int_vec reverse_key(const str& raw_key)
 str decode(const int_vec& code, const int_vec& key)
 {
 	str output;
-
 	if (code.size() != key.size()) return output;
 
 	for (size_t i = 0; i < code.size(); i++)
